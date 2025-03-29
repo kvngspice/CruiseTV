@@ -1,0 +1,13 @@
+{
+    "rewrites": [
+      {
+        "source": "/videos/(.*)",
+        "destination": "/videos/$1"
+      },
+      {
+        "source": "/(.*)",
+        "destination": "/index.html"
+      }
+    ]
+  }
+  
