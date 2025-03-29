@@ -1,0 +1,11 @@
+<svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+  <path 
+    d="M10,50 C10,25 25,10 50,10 C75,10 90,25 90,50 C90,75 75,90 50,90 C25,90 10,75 10,50 Z" 
+    stroke="rgba(255,255,255,0.2)" 
+    stroke-width="2" 
+    fill="none" 
+    stroke-linecap="round"
+    stroke-dasharray="4 6"
+    transform="translate(0,0) scale(1.1)"
+  />
+</svg> 
