@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-scroll';
 import Typewriter from './Typewriter';
+import cruiseVideo from '../assets/cruise.mp4';
 
 const HeroSection = styled.section`
   min-height: 100vh;
@@ -136,7 +137,7 @@ function Hero() {
     <HeroSection>
       <VideoBackground autoPlay muted loop playsInline>
         <source 
-          src="/videos/cruise.mp4"
+          src={cruiseVideo}
           type="video/mp4" 
         />
       </VideoBackground>
