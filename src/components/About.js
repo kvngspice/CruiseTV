@@ -37,13 +37,26 @@ const Title = styled.h2`
   transform: translateX(-50%);
   padding: 0 20px;
 
+  span.highlight {
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    -webkit-text-fill-color: #f3d250;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    display: inline-block;
+    transform: rotate(-2deg);
+    transition: transform 0.3s ease;
+    
+    &:hover {
+      transform: rotate(2deg) scale(1.05);
+    }
+  }
+
   &::before {
     content: '';
     position: absolute;
     top: 50%;
     left: 65%;
     width: calc(1000% + 300px);
-    height: calc(150% + 40px);
+    height: calc(160% + 40px);
     transform: translate(-50%, -50%);
     background: url(${handDrawnCircle}) no-repeat center;
     background-size: contain;
@@ -364,7 +377,7 @@ function LatestEpisodes() {
     return (
       <EpisodesSection>
         <Container>
-          <Title>Latest Episodes</Title>
+          <Title>Latest <span className="highlight">Episodes</span></Title>
           <LoadingMessage>Loading videos from YouTube...</LoadingMessage>
         </Container>
       </EpisodesSection>
@@ -375,7 +388,7 @@ function LatestEpisodes() {
     return (
       <EpisodesSection>
         <Container>
-          <Title>Latest Episodes</Title>
+          <Title>Latest <span className="highlight">Episodes</span></Title>
           <ErrorMessage>
             Error: {error}
             <br />
@@ -393,7 +406,7 @@ function LatestEpisodes() {
       transition={{ duration: 0.6 }}
     >
       <Container>
-        <Title>Latest Episodes</Title>
+        <Title>Latest <span className="highlight">Episodes</span></Title>
         <ScrollingContainer>
           <EpisodesGrid>
             {videos.map((video) => (

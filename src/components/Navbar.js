@@ -4,6 +4,17 @@ import { Link as RouterLink, useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
 import logo from '../assets/logo.png';
+import { ReactComponent as HomeIcon } from '../assets/home.svg';
+import { ReactComponent as VideoIcon } from '../assets/video.svg';
+import { ReactComponent as ProjectsIcon } from '../assets/projects.svg';
+import { ReactComponent as TeamIcon } from '../assets/team.svg';
+
+const iconColors = {
+  home: 'rgba(65, 218, 70, 0.6)', // Green
+  episodes: 'rgba(33, 150, 243, 0.3)', // Blue
+  casting: 'rgba(244, 67, 54, 0.3)', // Red
+  team: 'rgba(204, 124, 63, 0.69)', // Green
+};
 
 const NavContainer = styled.nav`
   position: fixed;
@@ -60,7 +71,7 @@ const NavItem = styled(motion.div)`
   border-radius: 12px;
   transition: all 0.2s ease;
   position: relative;
-  background: rgba(255, 255, 255, 0.1);
+  background: ${props => props.bgColor || 'rgba(255, 255, 255, 0.1)'};
   text-decoration: none;
   border: none;
   cursor: pointer;
@@ -69,11 +80,11 @@ const NavItem = styled(motion.div)`
 
   &:hover {
     transform: scale(1.1);
-    background: rgba(255, 255, 255, 0.2);
+    background: ${props => props.bgColor ? props.bgColor.replace('0.3', '0.4') : 'rgba(255, 255, 255, 0.2)'};
   }
 
   &.active {
-    background: rgba(255, 255, 255, 0.3);
+    background: ${props => props.bgColor ? props.bgColor.replace('0.3', '0.5') : 'rgba(255, 255, 255, 0.3)'};
   }
 
   &.active::after {
@@ -117,55 +128,24 @@ const IconTitle = styled.span`
   }
 `;
 
-// Add SVG icons
-const HomeIcon = () => (
-  <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-    <path d="M12 2.1L1 12h3v9h7v-6h2v6h7v-9h3L12 2.1zm0 2.691l6 5.4V19h-3v-6H9v6H6v-8.809l6-5.4z"/>
-  </svg>
-);
-
-const VideoIcon = () => (
-  <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-    <path d="M21 3H3c-1.11 0-2 .89-2 2v12c0 1.1.89 2 2 2h5v2h8v-2h5c1.1 0 1.99-.9 1.99-2L23 5c0-1.11-.9-2-2-2zm0 14H3V5h18v12zm-5-6l-7 4V7l7 4z"/>
-  </svg>
-);
-
-const ProjectsIcon = () => (
-  <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-    <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V5h14v14zm-5-6l-7 4V7l7 4z"/>
-  </svg>
-);
-
-const ContactIcon = () => (
-  <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-    <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 14H4V8l8 5 8-5v10zm-8-7L4 6h16l-8 5z"/>
-  </svg>
-);
-
-// Add new TeamIcon
-const TeamIcon = () => (
-  <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-    <path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5z"/>
-  </svg>
-);
-
-// Update the Icon styled component
+// Update the Icon styled component to handle SVG styles
 const Icon = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 24px;
-  height: 24px;
-  color: white;
-  transition: color 0.3s ease;
-
+  
   svg {
-    width: 20px;
-    height: 20px;
+    width: 24px;
+    height: 24px;
+    color: currentColor;
+    transition: all 0.2s ease;
   }
 
-  ${NavItem}:hover & {
-    color: rgba(255, 255, 255, 0.9);
+  @media (max-width: 480px) {
+    svg {
+      width: 20px;
+      height: 20px;
+    }
   }
 `;
 
@@ -228,16 +208,16 @@ const RouterNavItem = styled(RouterLink)`
   border-radius: 12px;
   transition: all 0.2s ease;
   position: relative;
-  background: rgba(255, 255, 255, 0.1);
+  background: ${props => props.bgColor || 'rgba(255, 255, 255, 0.1)'};
   text-decoration: none;
 
   &:hover {
     transform: scale(1.1);
-    background: rgba(255, 255, 255, 0.2);
+    background: ${props => props.bgColor ? props.bgColor.replace('0.3', '0.4') : 'rgba(255, 255, 255, 0.2)'};
   }
 
   &.active {
-    background: rgba(255, 255, 255, 0.3);
+    background: ${props => props.bgColor ? props.bgColor.replace('0.3', '0.5') : 'rgba(255, 255, 255, 0.3)'};
   }
 
   @media (max-width: 480px) {
@@ -283,6 +263,7 @@ function Navbar({ showTeamLink = true, isTeamPage = false }) {
             duration={500}
             activeClass="active"
             onClick={() => isTeamPage && handleNavClick('home')}
+            bgColor={iconColors.home}
           >
             <Icon><HomeIcon /></Icon>
             <IconTitle>Home</IconTitle>
@@ -296,6 +277,7 @@ function Navbar({ showTeamLink = true, isTeamPage = false }) {
             offset={0}
             activeClass="active"
             onClick={() => isTeamPage && handleNavClick('about')}
+            bgColor={iconColors.episodes}
           >
             <Icon><VideoIcon /></Icon>
             <IconTitle>Episodes</IconTitle>
@@ -309,13 +291,17 @@ function Navbar({ showTeamLink = true, isTeamPage = false }) {
             duration={500}
             activeClass="active"
             onClick={() => isTeamPage && handleNavClick('projects')}
+            bgColor={iconColors.casting}
           >
             <Icon><ProjectsIcon /></Icon>
             <IconTitle>Casting</IconTitle>
           </NavItem>
           
           {showTeamLink && (
-            <RouterNavItem to="/team">
+            <RouterNavItem 
+              to="/team"
+              bgColor={iconColors.team}
+            >
               <Icon><TeamIcon /></Icon>
               <IconTitle>Team</IconTitle>
             </RouterNavItem>
