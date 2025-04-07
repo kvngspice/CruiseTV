@@ -13,13 +13,6 @@ const SocialContainer = styled(motion.div)`
     gap: 1.5rem;
     margin-top: 2rem;
   }
-
-  @media (max-width: 430px) {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1rem;
-    padding: 0 1rem;
-  }
 `;
 
 const SocialLink = styled(motion.a)`
@@ -54,21 +47,6 @@ const SocialLink = styled(motion.a)`
     
     span {
       font-size: 0.9rem;
-    }
-  }
-
-  @media (max-width: 430px) {
-    width: 100%;
-    justify-content: center;
-    padding: 0.8rem;
-    
-    svg {
-      width: 18px;
-      height: 18px;
-    }
-    
-    span {
-      font-size: 0.85rem;
     }
   }
 `;

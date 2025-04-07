@@ -93,7 +93,7 @@ const TeamMember = styled(motion.div)`
 
 const MemberImage = styled.div`
   width: 120px;
-  height: 120px;
+  height: 150px;
   border-radius: 12px;
   margin: 0 auto 1.2rem;
   overflow: hidden;
@@ -140,14 +140,55 @@ const MemberRole = styled.p`
 
 const teamMembers = [
   {
-    name: "John Doe",
-    role: "Executive Producer",
-    image: "/images/team/john.jpg"
+    name: "DAYO",
+    role: "CEO & FOUNDER",
+    image: "/images/dayo.png"
   },
   {
-    name: "Jane Smith",
-    role: "Creative Director",
-    image: "/images/team/jane.jpg"
+    name: "AYOMIDE",
+    role: "PRODUCER",
+    image: "/images/ayomide.png"
+  }
+  ,
+  {
+    name: "SAMUEL",
+    role: "LEAD EDITOR",
+    image: "/images/samuel.png"
+  },
+  {
+    name: "MELODY",
+    role: "CASTING DIRECTOR",
+    image: "/images/melody.png"
+  },
+  {
+    name: "GLORY",
+    role: "SOCIAL MEDIA MANAGER",
+    image: "/images/glory.png"
+  },
+  {
+    name: "PASHEDA",
+    role: "PARTNERSHIP MANAGER",
+    image: "/images/pasheda.png"
+  },
+  {
+    name: "WOYE",
+    role: "SENIOR EDITOR",
+    image: "/images/woye.png"
+  },
+  {
+    name: "IRORO",
+    role: "AUDIO ENGINEER",
+    image: "/images/iroro.png"
+  },
+  {
+    name: "FEMI",
+    role: "SHORTS EDITOR",
+    image: "/images/femi.png"
+  },
+  {
+    name: "FADE",
+    role: "JUNIOR EDITOR",
+    image: "/images/fade.png"
   }
   // Add more team members here
 ];

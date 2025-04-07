@@ -377,7 +377,7 @@ function LatestEpisodes() {
     return (
       <EpisodesSection>
         <Container>
-          <Title>Latest <span className="highlight">Episodes</span></Title>
+          <Title>Latest Episodes</Title>
           <LoadingMessage>Loading videos from YouTube...</LoadingMessage>
         </Container>
       </EpisodesSection>
@@ -388,7 +388,7 @@ function LatestEpisodes() {
     return (
       <EpisodesSection>
         <Container>
-          <Title>Latest <span className="highlight">Episodes</span></Title>
+          <Title>Latest Episodes</Title>
           <ErrorMessage>
             Error: {error}
             <br />

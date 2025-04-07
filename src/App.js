@@ -12,6 +12,8 @@ import SocialLinks from './components/SocialLinks';
 import GlobalStyle from './styles/GlobalStyle';
 import Team from './components/Team';
 import CastingPage from './pages/CastingPage';
+import AboutUs from './components/AboutUs';
+import AdminCastingPage from './pages/AdminCastingPage';
 
 const MotionElement = styled(motion.div)`
   width: 100%;
@@ -237,6 +239,8 @@ function App() {
           <Route path="/" element={<MainContent />} />
           <Route path="/team" element={<TeamPage />} />
           <Route path="/casting" element={<CastingPage />} />
+          <Route path="/about" element={<AboutUs />} />
+          <Route path="/admin/casting" element={<AdminCastingPage />} />
         </Routes>
       </AnimatePresence>
     </Router>

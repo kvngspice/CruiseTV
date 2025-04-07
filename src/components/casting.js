@@ -40,10 +40,6 @@ const CastingSection = styled.section`
     min-height: auto;
     background-attachment: scroll;
   }
-
-  @media (max-width: 390px) {
-    padding: 30px 0.8rem;
-  }
 `;
 
 const Container = styled.div`
@@ -53,10 +49,6 @@ const Container = styled.div`
   z-index: 1;
   text-align: center;
   padding: 0 1rem;
-
-  @media (max-width: 390px) {
-    padding: 0 0.5rem;
-  }
 `;
 
 const Title = styled.h2`
@@ -115,14 +107,6 @@ const Title = styled.h2`
       height: calc(20% + 20px);
       transform: translate(-50%, -50%) rotate(-10deg);
     }
-
-    @media (max-width: 390px) {
-      top: 100%;
-      left: 50%;
-      width: calc(25% + 30px);
-      height: calc(25% + 15px);
-      transform: translate(-50%, -50%) rotate(-5deg);
-    }
   }
 
   @keyframes scrambleIn {
@@ -139,11 +123,6 @@ const Title = styled.h2`
       opacity: 0.8;
     }
   }
-
-  @media (max-width: 390px) {
-    font-size: 2rem;
-    padding: 0 10px;
-  }
 `;
 
 const Description = styled.p`
@@ -156,12 +135,6 @@ const Description = styled.p`
 
   @media (max-width: 768px) {
     font-size: 1.1rem;
-  }
-
-  @media (max-width: 390px) {
-    font-size: 1rem;
-    margin: 0 auto 1.5rem;
-    padding: 0 0.5rem;
   }
 `;
 
@@ -188,13 +161,6 @@ const NewsletterButton = styled(motion.button)`
     font-size: rem;
     width: 100%;
   }
-
-  @media (max-width: 390px) {
-    padding: 0.8rem 1.5rem;
-    font-size: 1rem;
-    width: 90%;
-    margin: 0 auto;
-  }
 `;
 
 const CastingImage = styled(motion.div)`
@@ -219,13 +185,6 @@ const CastingImage = styled(motion.div)`
     max-width: 90%;
     height: 200px;
     margin: 1rem auto;
-  }
-
-  @media (max-width: 390px) {
-    max-width: 95%;
-    height: 180px;
-    margin: 0.8rem auto;
-    border-radius: 12px;
   }
 `;
 
