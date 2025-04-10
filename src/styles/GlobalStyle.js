@@ -5,6 +5,7 @@ const GlobalStyle = createGlobalStyle`
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
   }
 
   html {
@@ -16,12 +17,12 @@ const GlobalStyle = createGlobalStyle`
   }
 
   body {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+    background: #000;
+    color: #fff;
+    overflow-x: hidden;
+    line-height: 1.6;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    overflow-x: hidden;
-    background: #0a0a0a;  // Dark background
-    color: #ffffff;
     
     &.no-scroll {
       overflow: hidden;
@@ -34,9 +35,38 @@ const GlobalStyle = createGlobalStyle`
   }
 
   h1, h2, h3, h4, h5, h6 {
-    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+  }
+
+  p {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+  }
+
+  button, input, textarea {
+    font-family: 'Poppins', sans-serif;
+  }
+
+  /* Adjust font weights for different elements */
+  .nav-text {
+    font-weight: 500;
+  }
+
+  .title {
     font-weight: 700;
-    color: #ffffff;
+  }
+
+  .subtitle {
+    font-weight: 500;
+  }
+
+  .body-text {
+    font-weight: 400;
+  }
+
+  .light-text {
+    font-weight: 300;
   }
 
   a {
