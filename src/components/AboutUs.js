@@ -203,7 +203,7 @@ function AboutUs() {
       <Navbar showTeamLink={true} isTeamPage={true} />
       <AboutUsSection>
         <Container>
-          <Title>About <span className="highlight">Cruise TV</span></Title>
+          <Title>About <span className="highlight">Cruise</span></Title>
           
           <ContentSection
             variants={sectionVariants}
